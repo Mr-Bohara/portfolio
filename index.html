@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Dhanush Bohara</title>
+  <meta name="description"
+    content="Dhanush Bohara is a passionate full-stack developer and software engineer specializing in modern web technologies.">
+  <meta name="keywords" content="Dhanush Bohara, IT Student, Web Developer">
+  <meta name="author" content="Dhanush Bohara">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.dhanushbohara.com.np/">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Dhanush Bohara - Full Stack Developer">
+  <meta property="og:description"
+    content="Passionate full-stack developer specializing in modern web technologies and software solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.dhanushbohara.com.np/">
+  <meta property="og:image" content="https://raw.githubusercontent.com/Mr-Bohara/portfolio/main/Favicon.png">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dhanush Bohara">
+  <meta name="twitter:description" content="Passionate full-stack developer specializing in modern web technologies.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Mr-Bohara/portfolio/main/Favicon.png">
+
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary": "#586062",
+            "surface": "#F0F5FA",
+            "on-surface": "#233442",
+            "primary-dim": "#4c5456",
+            "accent-blue": "#009087"
+          },
+          "fontFamily": {
+            "headline": ["Manrope"],
+            "body": ["Manrope"],
+            "label": ["Plus Jakarta Sans"]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      background-color: #F0F5FA;
+      font-family: "Manrope", sans-serif;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* Reveal Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Sophisticated Neumorphic - Claymorphism Evolution */
+    .clay-raised {
+      background: #F0F5FA;
+      box-shadow: 10px 10px 20px #dce3eb, -10px -10px 20px #fff;
+      border-radius: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1)
+    }
+
+    .clay-inset {
+      background: #F0F5FA;
+      box-shadow: inset 6px 6px 12px #dce3eb, inset -6px -6px 12px #fff;
+      border-radius: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.2)
+    }
+
+    /* Refined Tactile Card */
+    .tactile-card {
+      background: #F8FBFE;
+      border-radius: 2.5rem;
+      box-shadow: 15px 15px 35px rgba(190, 190, 190, 0.3), -15px -15px 35px rgba(255, 255, 255, 1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border: 1px solid rgba(255, 255, 255, 0.5)
+    }
+
+    .tactile-card:hover {
+      transform: translatey(-8px);
+      box-shadow: 20px 25px 45px rgba(190, 190, 190, 0.4), -20px -25px 45px rgba(255, 255, 255, 1)
+    }
+
+    /* Integrated 3D Button based on TEXT_7 */
+    .btn-3d {
+      transform: rotate(-5deg) skew(5deg);
+      transform-style: preserve-3d;
+      position: relative;
+      width: 140px;
+      height: 48px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-3d span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #233442;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 8px;
+      transition: 0.5s ease-out;
+    }
+
+    .btn-3d:hover span {
+      background: #009087;
+    }
+
+    .btn-3d:hover span:nth-child(5) {
+      transform: translate(12px, -12px);
+      opacity: 1;
+    }
+
+    .btn-3d:hover span:nth-child(4) {
+      transform: translate(9px, -9px);
+      opacity: .8;
+    }
+
+    .btn-3d:hover span:nth-child(3) {
+      transform: translate(6px, -6px);
+      opacity: .6;
+    }
+
+    .btn-3d:hover span:nth-child(2) {
+      transform: translate(3px, -3px);
+      opacity: .4;
+    }
+
+    .btn-3d:hover span:nth-child(1) {
+      transform: translate(0px, 0px);
+      opacity: .2;
+    }
+
+    .btn-3d:active span:nth-child(5) {
+      transform: translate(4px, -4px);
+    }
+
+    .neo-btn {
+      background: #e0e0e0;
+      border: none;
+      border-radius: 16px;
+      font-weight: 600;
+      color: #333;
+
+      /* Neumorphism Shadow */
+      box-shadow: 8px 8px 15px #ffc2c2,
+        -8px -8px 15px #ffffff;
+
+      transition: all 0.2s ease-in-out;
+    }
+
+    /* Hover Effect */
+    .neo-btn:hover {
+      box-shadow: 4px 4px 10px #bebebe,
+        -4px -4px 10px #ffffff;
+    }
+
+    /* Click Effect */
+    .neo-btn:active {
+      box-shadow: inset 4px 4px 10px #bebebe,
+        inset -4px -4px 10px #ffffff;
+    }
+
+    /* Sculpted Hero Image Container */
+    .sculpted-frame {
+      position: relative;
+      z-index: 1;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .photo-mask {
+      border-radius: 3rem 1.5rem 4rem 2rem;
+      overflow: hidden;
+      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.05);
+      transform: rotate(-1deg);
+      transition: all 0.6s ease
+    }
+
+    .nav-link {
+      position: relative;
+      padding-bottom: 4px
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #009087;
+      transition: width 0.3s ease
+    }
+
+    .nav-link:hover::after {
+      width: 100%
+    }
+
+    section {
+      scroll-margin-top: 120px
+    }
+  </style>
+</head>
+
+<body class="text-on-surface bg-surface selection:bg-accent-blue/20">
+  <!-- Desktop NavBar -->
+  <header class="hidden md:flex fixed top-0 w-full z-50 items-center justify-center pt-8">
+    <div
+      class="w-[90%] max-w-7xl clay-raised px-10 py-4 flex justify-between items-center backdrop-blur-xl bg-white/50 border-white/40">
+      <div class="flex items-center">
+        <img src="https://raw.githubusercontent.com/Mr-Bohara/portfolio/main/Logo.png" alt="Dhanush Logo"
+          class="h-12 w-auto">
+      </div>
+      <nav class="flex gap-12">
+        <a class="nav-link font-label text-xs font-bold uppercase tracking-wider text-slate-800"
+          href="#projects">Projects</a>
+        <a class="nav-link font-label text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-slate-900"
+          href="#expertise">Expertise</a>
+        <a class="nav-link font-label text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-slate-900"
+          href="#about">About</a>
+        <a class="nav-link font-label text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-slate-900"
+          href="#connect">Contact</a>
+      </nav>
+      <button class="btn-3d"><span></span><span></span><span></span><span></span><span>Welcome</span></button>
+    </div>
+  </header>
+  <main class="pt-32 md:pt-60 pb-32 px-6 max-w-7xl mx-auto space-y-48 md:space-y-64">
+    <!-- Hero Section -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-12 items-center min-h-[70vh] reveal">
+      <div class="lg:col-span-7 space-y-12 order-2 lg:order-1">
+        <div class="space-y-8">
+          <div
+            class="inline-flex items-center gap-3 px-5 py-2.5 clay-inset text-[10px] font-extrabold uppercase tracking-[0.25em] text-red-500">
+            <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span>
+            Available for Work
+          </div>
+          <h1
+            class="font-headline text-6xl md:text-8xl lg:text-[7rem] font-extrabold tracking-tight text-slate-900 leading-[0.95] mb-4">
+            Mr. Bohara
+          </h1>
+          <p class="font-body text-xl md:text-2xl text-slate-500 max-w-2xl leading-relaxed">
+            No stress. No drama.
+            <br>Just vibes and goals.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-8 items-center pt-6">
+
+          <!-- GitHub -->
+          <a aria-label="GitHub" target="_blank"
+            class="group p-5 clay-raised hover:-translate-y-1 transition-all duration-300"
+            href="https://github.com/Mr-Bohara">
+            <svg class="w-6 h-6 text-slate-700 group-hover:text-black" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 .5C5.73.5.75 5.7.75 12.1c0 5.1 3.29 9.4 7.86 10.9.58.1.79-.26.79-.57v-2c-3.2.7-3.87-1.4-3.87-1.4-.52-1.3-1.26-1.6-1.26-1.6-1.03-.7.08-.7.08-.7 1.14.1 1.74 1.2 1.74 1.2 1.02 1.8 2.67 1.3 3.32 1 .1-.8.4-1.3.73-1.6-2.56-.3-5.25-1.3-5.25-5.9 0-1.3.45-2.3 1.18-3.1-.12-.3-.52-1.5.11-3.1 0 0 .96-.3 3.15 1.2a10.6 10.6 0 0 1 2.87-.4c.97 0 1.94.1 2.87.4 2.2-1.5 3.15-1.2 3.15-1.2.63 1.6.23 2.8.11 3.1.74.8 1.18 1.8 1.18 3.1 0 4.6-2.7 5.6-5.27 5.9.41.4.77 1 .77 2v3c0 .3.21.7.8.6A11.6 11.6 0 0 0 23.25 12C23.25 5.7 18.27.5 12 .5z" />
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a aria-label="LinkedIn" target="_blank"
+            class="group p-5 clay-raised hover:-translate-y-1 transition-all duration-300"
+            href="https://www.linkedin.com/in/dhanush-bohara-660732358/">
+            <svg class="w-6 h-6 text-slate-700 group-hover:text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.67H9.33V9h3.41v1.56h.05c.48-.9 1.64-1.86 3.37-1.86 3.6 0 4.27 2.37 4.27 5.46v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z" />
+            </svg>
+          </a>
+
+          <!-- Email -->
+          <a aria-label="Email" target="_blank"
+            class="group p-5 clay-raised hover:-translate-y-1 transition-all duration-300"
+            href="mailto:mr.dhanushbohara@gmail.com">
+            <svg class="w-6 h-6 text-slate-700 group-hover:text-red-500" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+          </a>
+
+          <div class="h-px flex-1 max-w-[120px] bg-slate-200 hidden sm:block"></div>
+
+          <button class="btn-3d">
+            <span></span><span></span><span></span><span></span>
+            <span>Portfolio</span>
+          </button>
+        </div>
+      </div>
+      <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end pr-8">
+        <div class="sculpted-frame w-full max-w-[420px] aspect-[4/5]">
+          <div class="photo-mask w-full h-full clay-raised p-0"><img alt="Dhanush Bohara"
+              class="w-full h-full object-cover"
+              src="https://raw.githubusercontent.com/Mr-Bohara/portfolio/main/Profile%20Photo.png" /></div>
+          <!-- Float 3D detail -->
+          <div
+            class="absolute -top-12 -left-12 w-24 h-24 clay-raised rounded-full bg-white flex items-center justify-center -z-10 animate-bounce duration-[4000ms] opacity-60">
+            <span class="material-symbols-outlined text-accent-blue text-4xl">ink_pen</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center reveal" id="about">
+      <div class="clay-inset p-4 overflow-hidden rounded-[3rem]"><img alt="Dhanush Bohara"
+          class="w-full h-[650px] object-cover rounded-[2.5rem] shadow-2xl hover:scale-105 transition duration-500"
+          src="https://raw.githubusercontent.com/Mr-Bohara/portfolio/main/Dhanush%20(2).png" /></div>
+      <div class="space-y-14">
+        <div class="space-y-6">
+          <h2 class="font-headline text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight">About Me</h2>
+          <div class="h-1.5 w-24 bg-accent-blue rounded-full"></div>
+        </div>
+        <div class="space-y-8 text-xl text-slate-600 leading-relaxed font-body">
+          <p style="text-align: justify; text-justify: inter-word; hyphens: auto;">
+            I am <strong>Dhanush Bohara</strong>, an enthusiastic IT student with a strong interest in programming and
+            software
+            development. I have completed my +2 in IT (Computer Engineering). I am passionate about learning programming
+            languages such as Python,
+            Java, C, and C++, and I am continuously improving my skills from beginner to advanced level. Along with
+            this, I have also been working on web development projects using HTML, CSS, and JavaScript, which is helping
+            me gain practical real-world experience.
+          </p>
+          <p style="text-align: justify; text-justify: inter-word; hyphens: auto;">
+            My main goal is to become a skilled <strong>Software Engineer</strong> and create innovative solutions that
+            can make a
+            positive impact. I am especially interested in Web Development, Artificial Intelligence, and Software
+            Engineering fields. Currently, I am gaining hands-on experience through personal projects. In the future, I
+            aim to build my own software company and contribute meaningfully to the
+            tech industry through innovation and problem-solving.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-10">
+          <div class="tactile-card p-10 text-center bg-white/40">
+            <span class="block font-headline text-6xl font-black text-slate-800 tracking-tighter">15+</span>
+            <span class="font-label text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-4 block">
+              Projects</span>
+          </div>
+          <div class="tactile-card p-10 text-center bg-white/40">
+            <span class="block font-headline text-6xl font-black text-slate-800 tracking-tighter">05+</span>
+            <span
+              class="font-label text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-4 block">Complete</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Expertise Section -->
+    <section class="space-y-24 reveal" id="expertise">
+      <div class="max-w-3xl space-y-6">
+        <h2 class="font-headline text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight">
+          Crafting Tools &amp; Expertise
+        </h2>
+        <div class="h-1.5 w-24 bg-accent-blue rounded-full"></div>
+        <p class="text-slate-500 text-xl md:text-2xl leading-relaxed">
+          I am a passionate IT learner focused on building strong foundations in programming, problem-solving, and
+          modern software development. I continuously improve my skills through real-world projects and hands-on
+          practice.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 pt-8">
+
+        <!-- Skill 1 -->
+        <div class="tactile-card p-12 space-y-8">
+          <div class="clay-inset w-20 h-20 flex items-center justify-center">
+            <span class="material-symbols-outlined text-accent-blue text-4xl">terminal</span>
+          </div>
+          <div class="space-y-4">
+            <h3 class="font-headline font-extrabold text-3xl">Programming Fundamentals</h3>
+            <p class="text-slate-500 text-lg leading-relaxed">
+              Strong understanding of C, C++, Java, and Python with focus on problem-solving, logic building, and core
+              computer science concepts.
+            </p>
+          </div>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="tactile-card p-12 space-y-8 lg:translate-y-16">
+          <div class="clay-inset w-20 h-20 flex items-center justify-center">
+            <span class="material-symbols-outlined text-accent-blue text-4xl">code</span>
+          </div>
+          <div class="space-y-4">
+            <h3 class="font-headline font-extrabold text-3xl">Frontend Development</h3>
+            <p class="text-slate-500 text-lg leading-relaxed">
+              Building responsive and interactive websites using HTML, CSS, JavaScript, and modern UI practices to
+              create smooth user experiences.
+            </p>
+          </div>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="tactile-card p-12 space-y-8">
+          <div class="clay-inset w-20 h-20 flex items-center justify-center">
+            <span class="material-symbols-outlined text-accent-blue text-4xl">smart_toy</span>
+          </div>
+          <div class="space-y-4">
+            <h3 class="font-headline font-extrabold text-3xl">Aim</h3>
+            <p class="text-slate-500 text-lg leading-relaxed">
+              My aim is to turn theoretical knowledge into practical skills by building real-world projects. I am
+              continuously improving my problem-solving ability and coding skills through consistent practice in
+              programming and software development.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="space-y-24 reveal" id="projects">
+
+      <!-- Heading -->
+      <div class="max-w-3xl space-y-6">
+        <h2 class="font-headline text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight">
+          Featured Projects
+        </h2>
+        <div class="h-1.5 w-24 bg-accent-blue rounded-full"></div>
+        <p class="text-slate-500 text-xl md:text-2xl leading-relaxed">
+          My practical development work built through learning, experimentation, and real-world problem solving.
+        </p>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 pt-8">
+
+        <!-- CARD STYLE NEW -->
+        <div
+          class="group relative p-10 rounded-3xl bg-white/30 backdrop-blur-xl border border-white/40 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3">
+
+          <div
+            class="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition">
+          </div>
+
+          <div class="relative space-y-6">
+
+            <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-accent-blue/10">
+              <span class="material-symbols-outlined text-accent-blue text-3xl">web</span>
+            </div>
+
+            <h3 class="font-headline font-extrabold text-2xl text-slate-900">Portfolio Website</h3>
+
+            <p class="text-slate-500 leading-relaxed">
+              Modern responsive portfolio built using HTML, Tailwind CSS, and JavaScript with smooth animations.
+            </p>
+
+            <a href="#" class="inline-flex items-center gap-2 text-accent-blue font-bold hover:gap-3 transition-all">
+              View Project <span>→</span>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div
+          class="group relative p-10 rounded-3xl bg-white/30 backdrop-blur-xl border border-white/40 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 lg:translate-y-10">
+
+          <div
+            class="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition">
+          </div>
+
+          <div class="relative space-y-6">
+
+            <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-accent-blue/10">
+              <span class="material-symbols-outlined text-accent-blue text-3xl">smart_toy</span>
+            </div>
+
+            <h3 class="font-headline font-extrabold text-2xl text-slate-900">KaleProBot</h3>
+
+            <p class="text-slate-500 leading-relaxed">
+              AI-based chatbot system designed to automate responses and improve interaction experience.
+            </p>
+
+            <a href="#" class="inline-flex items-center gap-2 text-accent-blue font-bold hover:gap-3 transition-all">
+              View Project <span>→</span>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div
+          class="group relative p-10 rounded-3xl bg-white/30 backdrop-blur-xl border border-white/40 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3">
+
+          <div
+            class="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition">
+          </div>
+
+          <div class="relative space-y-6">
+
+            <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-accent-blue/10">
+              <span class="material-symbols-outlined text-accent-blue text-3xl">code</span>
+            </div>
+
+            <h3 class="font-headline font-extrabold text-2xl text-slate-900">Programming Practice</h3>
+
+            <p class="text-slate-500 leading-relaxed">
+              Collection of C, C++, Java, and Python projects for logic building and problem solving.
+            </p>
+
+            <a href="#" class="inline-flex items-center gap-2 text-accent-blue font-bold hover:gap-3 transition-all">
+              View Project <span>→</span>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="max-w-5xl mx-auto space-y-20 reveal" id="connect">
+      <div class="text-center space-y-6">
+        <h2 class="font-headline text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight">Start a Conversation
+        </h2>
+        <p class="text-slate-500 text-xl md:text-2xl font-body">Let's build something tactile and meaningful together.
+        </p>
+      </div>
+      <form class="clay-raised p-12 md:p-20 space-y-12 bg-white/40 border-white/60">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="space-y-4">
+            <label class="font-label text-[10px] font-extrabold uppercase tracking-[0.2em] text-slate-400 ml-4">Full
+              Name</label>
+            <input
+              class="w-full clay-inset border-none p-6 focus:ring-4 focus:ring-accent-blue/10 bg-slate-50 transition-all outline-none font-body text-lg"
+              placeholder="Dhanush Bohara" type="text" />
+          </div>
+          <div class="space-y-4">
+            <label class="font-label text-[10px] font-extrabold uppercase tracking-[0.2em] text-slate-400 ml-4">Email
+              Address</label>
+            <input
+              class="w-full clay-inset border-none p-6 focus:ring-4 focus:ring-accent-blue/10 bg-slate-50 transition-all outline-none font-body text-lg"
+              placeholder="hello@dhanush.studio" type="email" />
+          </div>
+        </div>
+        <div class="space-y-4">
+          <label class="font-label text-[10px] font-extrabold uppercase tracking-[0.2em] text-slate-400 ml-4">Project
+            Brief</label>
+          <textarea
+            class="w-full clay-inset border-none p-8 focus:ring-4 focus:ring-accent-blue/10 bg-slate-50 transition-all min-h-[220px] outline-none font-body text-lg"
+            placeholder="Tell me about your vision..."></textarea>
+        </div>
+        <div class="pt-8 text-center">
+          <button class="neo-btn w-full md:w-auto px-16 py-6 text-base">
+            Submit
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="max-w-5xl mx-auto space-y-20 reveal" id="connect">
+
+      <!-- Heading -->
+      <div class="text-center space-y-6">
+        <h2 class="font-headline text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight">
+          Get In Touch
+        </h2>
+        <div class="h-1.5 w-24 bg-accent-blue mx-auto rounded-full"></div>
+        <p class="text-slate-500 text-xl md:text-2xl font-body">
+          Have an idea, project, or opportunity? Let’s connect and build something amazing together.
+        </p>
+      </div>
+
+      <!-- Contact Card -->
+      <div class="clay-raised p-12 md:p-16 space-y-12 bg-white/40 border-white/60 rounded-[2.5rem]">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+          <!-- Name -->
+          <div class="space-y-3">
+            <label class="font-label text-[10px] font-extrabold uppercase tracking-[0.2em] text-slate-400 ml-2">
+              Your Name
+            </label>
+            <input type="text" placeholder="Enter your name"
+              class="w-full clay-inset p-5 rounded-2xl bg-slate-50 outline-none focus:ring-4 focus:ring-accent-blue/20 text-slate-700" />
+          </div>
+
+          <!-- Email -->
+          <div class="space-y-3">
+            <label class="font-label text-[10px] font-extrabold uppercase tracking-[0.2em] text-slate-400 ml-2">
+              Email Address
+            </label>
+            <input type="email" placeholder="you@example.com"
+              class="w-full clay-inset p-5 rounded-2xl bg-slate-50 outline-none focus:ring-4 focus:ring-accent-blue/20 text-slate-700" />
+          </div>
+
+        </div>
+
+        <!-- Subject -->
+        <div class="space-y-3">
+          <label class="font-label text-[10px] font-extrabold uppercase tracking-[0.2em] text-slate-400 ml-2">
+            Subject
+          </label>
+          <input type="text" placeholder="Project / Collaboration / Opportunity"
+            class="w-full clay-inset p-5 rounded-2xl bg-slate-50 outline-none focus:ring-4 focus:ring-accent-blue/20 text-slate-700" />
+        </div>
+
+        <!-- Message -->
+        <div class="space-y-3">
+          <label class="font-label text-[10px] font-extrabold uppercase tracking-[0.2em] text-slate-400 ml-2">
+            Message
+          </label>
+          <textarea rows="6" placeholder="Write your message..."
+            class="w-full clay-inset p-6 rounded-2xl bg-slate-50 outline-none focus:ring-4 focus:ring-accent-blue/20 text-slate-700"></textarea>
+        </div>
+
+        <!-- Button -->
+        <div class="text-center pt-6">
+          <button class="neo-btn w-full md:w-auto px-16 py-5 text-base">
+            Send Message
+          </button>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 pt-6 text-2xl">
+
+          <a href="mailto:mr.dhanushbohara@gmail.com" class="text-slate-500 hover:text-red-500 transition">
+            <i class="fas fa-envelope"></i>
+          </a>
+
+          <a href="https://facebook.com/yourprofile" target="_blank"
+            class="text-slate-500 hover:text-blue-600 transition">
+            <i class="fab fa-facebook"></i>
+          </a>
+
+          <a href="https://tiktok.com/@yourprofile" target="_blank"
+            class="text-slate-500 hover:text-pink-500 transition">
+            <i class="fab fa-tiktok"></i>
+          </a>
+
+          <a href="https://github.com/Mr-Bohara" target="_blank" class="text-slate-500 hover:text-black transition">
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/dhanush-bohara-660732358/" target="_blank"
+            class="text-slate-500 hover:text-blue-700 transition">
+            <i class="fab fa-linkedin"></i>
+          </a>
+
+        </div>
+      </div>
+
+      </div>
+    </section>
+
+
+  </main>
+
+
+  <!-- Footer (Shared Component) -->
+  <footer
+    class="w-full mt-20 rounded-t-[3rem] bg-slate-100 flex flex-col md:flex-row justify-between items-center px-12 py-10 gap-6 no-border shadow-[inset_0px_4px_12px_#d2e5f7]">
+    <div class="flex items-center">
+      <img src="https://raw.githubusercontent.com/Mr-Bohara/portfolio/main/Logo.png" alt="Dhanush Logo"
+        class="h-14 w-20">
+    </div>
+    <p class="font-jakarta text-xs tracking-widest uppercase text-slate-600">
+      © <span id="year"></span> <b>Dhanush Bohara. All rights reserved </b>
+    </p>
+    <div class="flex gap-6">
+      <a class="font-jakarta text-xs tracking-widest uppercase text-slate-500 hover:text-primary transition-colors"
+        href="https://www.linkedin.com/in/dhanush-bohara-660732358/">LinkedIn</a>
+      <a class="font-jakarta text-xs tracking-widest uppercase text-slate-500 hover:text-primary transition-colors"
+        href="https://github.com/Mr-Bohara">GitHub</a>
+      <a class="font-jakarta text-xs tracking-widest uppercase text-slate-500 hover:text-primary transition-colors"
+        href="https://www.facebook.com/dhanush.bohara.2025">Facebook</a>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Navigation -->
+  <div class="md:hidden fixed top-8 left-0 w-full z-50 px-8">
+    <div
+      class="mobile-nav-blur clay-raised rounded-full py-4 px-10 flex justify-between items-center bg-white/70 border-white/40">
+      <a class="flex flex-col items-center text-accent-blue" href="#">
+        <span class="material-symbols-outlined font-bold">home</span>
+        <span class="text-[8px] font-extrabold uppercase mt-1">Home</span>
+      </a>
+      <a class="flex flex-col items-center text-slate-400" href="#expertise">
+        <span class="material-symbols-outlined font-bold">bolt</span>
+        <span class="text-[8px] font-extrabold uppercase mt-1">Tools</span>
+      </a>
+      <a class="flex flex-col items-center text-slate-400" href="#about">
+        <span class="material-symbols-outlined font-bold">person</span>
+        <span class="text-[8px] font-extrabold uppercase mt-1">About</span>
+      </a>
+      <a class="flex flex-col items-center text-slate-400" href="#connect">
+        <span class="material-symbols-outlined font-bold">chat_bubble</span>
+        <span class="text-[8px] font-extrabold uppercase mt-1">Chat</span>
+      </a>
+    </div>
+  </div>
+  <script>
+    const observerOptions = {
+      threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>
